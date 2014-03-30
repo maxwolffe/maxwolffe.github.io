@@ -1,37 +1,53 @@
-@import url('http://fonts.googleapis.com/css?family=Old+Standard+TT');
-
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
 
 * {
-    font: inherit;
-    box-sizing: border-box;
-    cursor: default;
-    margin: 0;
-    padding: 0;
-    background-color: #003366;
-    color: #fff;
+    font: inherit !important;
 }
+
+html body { 
+    font: 300 14px/1.5 Open Sans !important;
+}
+
 
 body {
-    height:100%;
-    width:100%;
-    margin-top: -20px;
+    position: relative;
+    background-color: #003366 !important;
 }
 
-.boxy {
-    height: 
-    
+
+
+.boxer {
+    position: relative;
+    text-align: center;
+    margin-bottom: auto;
+    margin-top: 10%;
+} 
+
+
+.top-bar{
+    height: 10%;
+}
+
+.name{
+    width: 40%;
+    background-color: white;
+}
 
 .circular {
     width: 300px;
     height: 300px;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 150px;
-    -webkit-border-radius: 150px;
-    -moz-border-radius: 150px;
     background: url("../MaxHeadBW.jpg") no-repeat;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;;
     box-shadow: 0 0 8px rgba(0,0,0,.8);
     -webkit-box-shadow: 0 0 8px rgba(0,0,0,.8);
     -moz-box-shadow: 0 0 8px rgba(0,0,0,.8);
 }
 .circular:hover {
     background: url("../MaxHead.jpg") no-repeat;
-}
+} 
+
