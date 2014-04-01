@@ -1,21 +1,32 @@
-@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+@import url('http://fonts.googleapis.com/css?family=Abril+Fatface');
 
 * {
-    font: inherit !important;
+    font: inherit;
 }
 
-html body { 
-    font: 300 14px/1.5 Open Sans !important;
+html{ 
     height: 100%;
     width: 100%;
 }
 
 
 body {
+    height:80%;
     position: relative;
-    background-color: #003366 !important;
+    background-color: #003366;
 }
 
+h1 {
+    text-align: center;
+    font: Abril Fatface !important;
+    color: #fff;
+    font-size: 300%;
+    font-weight: lighter;
+}
+
+#subtitle {
+    font-size: 250%;
+}
 
 .boxer {
     position: relative;
@@ -28,9 +39,8 @@ body {
 }
 
 .name_bar{
-    margin-top: 10%;
-    background-color: white;
-    height: 30px;
+    margin-top: 5%;
+    height: 50px;
 }
 
 
@@ -80,7 +90,7 @@ body {
 
 
 #click{
-    margin-top: 25%;
+    vertical-align: middle;
     margin-right: auto;
     margin-left: auto;
 }
