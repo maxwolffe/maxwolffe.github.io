@@ -193,8 +193,8 @@ pre {
 
     > svg {
         display: inline-block;
-        width: 16px;
-        height: 16px;
+        width: 45px;
+        height: 45px;
         vertical-align: middle;
 
         path {
@@ -202,3 +202,13 @@ pre {
         }
     }
 }
+
+.icon:hover {
+
+    > svg {
+        path {
+            fill:  #dd4b39;
+        }
+    }
+}
+

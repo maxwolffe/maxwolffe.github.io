@@ -104,8 +104,15 @@
 .contact-list,
 .social-media-list {
     list-style: none;
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    li{
+        display:inline;
+    }
 }
+
 
 .footer-col-wrapper {
     font-size: 15px;
