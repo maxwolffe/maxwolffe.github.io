@@ -5,6 +5,9 @@
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
+    background-color: $background-color;
+
+    float: center;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -14,18 +17,17 @@
     font-size: 26px;
     line-height: 56px;
     letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
+    margin: 0 auto;
 
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: $text-color;
     }
 }
 
 .site-nav {
-    float: right;
-    line-height: 56px;
+    float: center;
+    line-height: 0px;
 
     .menu-icon {
         display: none;
@@ -70,6 +72,7 @@
         }
 
         .trigger {
+            margin-bottom: 20px;
             clear: both;
             display: none;
         }
@@ -92,6 +95,8 @@
  */
 .site-footer {
     border-top: 1px solid $grey-color-light;
+    color: $white;
+    background: $grey-color;
     padding: $spacing-unit 0;
 }
 
@@ -115,7 +120,7 @@
 
 .footer-col-wrapper {
     font-size: 15px;
-    color: $grey-color;
+    color: $white;
     margin-left: -$spacing-unit / 2;
     @extend %clearfix;
 }
@@ -143,6 +148,7 @@
 
 .footer-sign-off {
     margin: 0 auto;
+    color: $white;
     text-align: center;
 }
 

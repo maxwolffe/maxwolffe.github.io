@@ -197,7 +197,7 @@ pre {
         vertical-align: middle;
 
         path {
-            fill: $grey-color;
+            fill: $white;
         }
     }
 }
@@ -251,3 +251,26 @@ pre {
     }
 }
 
+/**
+*  Custom Styling
+*/
+
+#max-face {
+    background-image: url(../images/max_face.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 10px auto 0px auto;
+}
+
+.menu-bar {
+    float: center;
+    text-align: center;
+}
+
+.trigger {
+    margin-bottom: 20px;
+}
