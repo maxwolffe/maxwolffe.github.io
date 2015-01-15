@@ -1,15 +1,39 @@
-# Site settings
-title: Max Wolffe
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Max Wolffe
+tagline:          'Student. Developer. Human.'
+description:      'Student at UC Berkeley. </br> Developer at <a href="http://bptech.berkeley.edu/" target="_blank">Blueprint</a>.' 
+url:              http://maxwolffe.com
+baseurl:          /
+
+author:
+  name:           'Max Wolffe'
+  url:            https://twitter.com/maxwolffe
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/poole/hyde
+
+# Social Media Content
+
 email: max.wolffe@berkeley.edu
-description: > # this means to ignore newlines until "baseurl:"
-  Student. Developer. Human
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.maxwolffe.com" # the base hostname & protocol for your site
 twitter_username: MaxWolffe
 github_username:  maxwolffe
 linkedin_username: maxwolffe
 googleplus_username: 102684669296291978308
 pinterest_username: maxwolffe
 
-# Build settings
-markdown: kramdown
+# Sizing
+
+iconsize: 42px
