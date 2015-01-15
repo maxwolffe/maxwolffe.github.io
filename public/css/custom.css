@@ -42,7 +42,7 @@
 
 /** 
 *  Lists
-**/ 
+*/ 
 
 .social-media-list {
     list-style: none;
@@ -66,4 +66,30 @@
 .media-line {
   height: 50px;
   width: wrap-content;
+}
+
+/**
+*  Sidebar position
+*/ 
+
+.sidebar-core {
+  vertical-align: middle;
+}
+
+/**
+* Image styling
+*/
+
+#max-face {
+    background-image: url(../max_face.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    border: 3px solid;
+    border-color: #ffffff;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    vertical-align: middle;
 }
