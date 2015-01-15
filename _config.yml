@@ -9,7 +9,7 @@ relative_permalinks: true
 # Setup
 title:            Max Wolffe
 tagline:          'Student. Developer. Human.'
-description:      'Student at UC Berkeley. </br> Developer at <a href="http://bptech.berkeley.edu/" target="_blank">Blueprint</a>. UGSI at <a href="http://cs61a.org/" target="_blank">CS61A</a>.'
+description:      'Student at UC Berkeley. </br> Developer at <a href="http://bptech.berkeley.edu/" target="_blank">Blueprint</a> <br> and UGSI at <a href="http://cs61a.org/" target="_blank">CS61A</a>.'
 url:              http://maxwolffe.com
 baseurl:          /
 
