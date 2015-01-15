@@ -17,7 +17,7 @@ Thanks for visiting!
 [cs61a]:         http://www.cs61a.org
 [blueprint]:     http://bptech.berkeley.edu
 [tedxberkeley]:  http://www.tedxberkeley.org
-[max-email]:     mailto://max.wolffe@berkeley.edu
+[max-email]:     mailto:max.wolffe@berkeley.edu
 [jekyll]:        http://jekyllrb.com/
 [hyde]:          http://andhyde.com/
 [repo]:          https://github.com/maxwolffe/maxwolffe.github.io
