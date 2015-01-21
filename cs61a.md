@@ -5,6 +5,9 @@ title: CS61A Spring 2015
 
 ## Office Hours
 
+Where: Garbarini Lounge 
+(Outside of Sibley Auditorium in the Bechtel Engineering Center)
+
 Thursday: 11am
 
 Friday: 11am - 1pm 
