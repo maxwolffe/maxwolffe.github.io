@@ -5,23 +5,16 @@ title: Max Wolffe
 
 # Hi, I'm Max
 
-I'm a Student at UC Berkeley studying Electrical Engineering and Computer Science. I'm passionate about teaching, learning, and building cool things. I'm also an Undergraduate Student Instructor for [CS61A][cs61a], a Developer for [Blueprint][blueprint], and the Director of Logistics for [TEDxBerkeley][tedxberkeley]. You can send me an email [here][max-email].
+I've just graduated from UC Berkeley with a degree in Electrical Engineering and Computer Science. I'm passionate about teaching, learning, and building cool things. While at Berkeley I was an Undergraduate Student Instructor for [CS61A][cs61a], a Developer for [Blueprint][blueprint], an Undergraduate Research Assistant with the [NetSys][netsys] lab, and the Director of Logistics for [TEDxBerkeley][tedxberkeley].
 
-# About This Site
+I'll be starting in August as a Software Engineer at LinkedIn.
 
-This site is made using [Jekyll][jekyll] and [Hyde][hyde], an awesome static site generator and a great theme to accompany it respectively. I'll be using it to host CS61A information, projects, and maybe a blog. Feel free to look at the [repository][repo] and let me know if you have any feedback. Inpiration from [Chris Banes][chrisB]
+You can send me an email [here][max-email].
 
 Thanks for visiting!
 
-
-[cs61a]:         http://www.cs61a.org
 [blueprint]:     http://bptech.berkeley.edu
-[tedxberkeley]:  http://www.tedxberkeley.org
+[cs61a]:         http://www.cs61a.org
 [max-email]:     mailto:max.wolffe@berkeley.edu
-[jekyll]:        http://jekyllrb.com/
-[hyde]:          http://andhyde.com/
-[repo]:          https://github.com/maxwolffe/maxwolffe.github.io
-[chrisB]:        https://chris.banes.me/
-
-
-
+[netsys]:        https://netsys.cs.berkeley.edu/index.html
+[tedxberkeley]:  http://www.tedxberkeley.org
