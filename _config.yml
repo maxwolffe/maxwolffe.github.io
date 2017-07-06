@@ -1,5 +1,4 @@
 # Dependencies
-markdown:         redcarpet
 highlighter:      pygments
 
 # Permalinks
@@ -16,9 +15,6 @@ author:
   name:           'Max Wolffe'
   url:            https://twitter.com/maxwolffe
 
-paginate:         5
-
-
 # Social Media Content
 
 email: max.wolffe@berkeley.edu
@@ -31,3 +27,7 @@ pinterest_username: maxwolffe
 # Sizing
 
 iconsize: 42px
+
+# Dependencies:
+gems:
+  - jekyll-gist
