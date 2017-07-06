@@ -3,6 +3,6 @@ layout: page
 title: Personal Projects
 ---
 
-## What's Here?
+## City Guide
 
-An Alexa skill that allows users to check into locations on Foursquare / Swarm.
+An Alexa skill that integrates with the Foursquare API.
