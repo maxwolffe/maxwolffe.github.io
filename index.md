@@ -5,7 +5,7 @@ title: Max Wolffe
 
 # Hi, I'm Max
 
-I'm a software engineer at LinkedIn, working on the Realtime Platform,. I'm passionate about teaching, learning, and building cool things. While at Berkeley I was an Undergraduate Student Instructor for [CS61A][cs61a], a Developer for [Blueprint][blueprint], an Undergraduate Research Assistant with the [NetSys][netsys] lab, and the Director of Logistics for [TEDxBerkeley][tedxberkeley].
+I'm currently a software engineer at LinkedIn, working on the Realtime Platform. I'm passionate about teaching, learning, and building cool things. While at Berkeley I was an Undergraduate Student Instructor for [CS61A][cs61a], a Developer for [Blueprint][blueprint], an Undergraduate Research Assistant with the [NetSys][netsys] lab, and the Director of Logistics for [TEDxBerkeley][tedxberkeley].
 
 You can send me an email [here][max-email].
 
