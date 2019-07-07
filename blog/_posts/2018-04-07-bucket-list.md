@@ -1,12 +1,13 @@
 ---
 layout: post
 title: Bucket List
+date_updated: 2019-07-07
 ---
 
 I recently had a conversation with my fiance, in which we discussed our respective goals for our lives, and how we want to achieve them. The only problem was that I didn't have anything more concrete than "Help people", "have a family", "make a difference". Here's my attempt to pin down a set of specific and measurable goals for me to work towards, as well as some classic "bucket list" item. I'm throwing it up on the web to keep me honest.
 
-1. Marry Kelly Noah
-2. Adopt a dog
+1. ~~Marry Kelly Noah~~ **(August 12, 2018)**
+2. ~~Adopt a dog~~ **(Jan 12, 2019)**
 3. Have a child
 4. Purchase a home to live in myself
 5. Purchase a rental property

@@ -3,9 +3,9 @@ layout: page
 title: Blog
 ---
 
-I occasionally have thoughts which are worth sharing. I will put them here for the world to see.
+I occasionally have thoughts which are worth sharing.
 
-{% for post in site.posts %}
-  [{{ post.title }}]({{post.url}})
+{% for post in site.categories.blog %}
+  [{{ post.title }}]({{post.url}}) - {{post.date_updated}}
   {{ post.excerpt }}
 {% endfor %}
