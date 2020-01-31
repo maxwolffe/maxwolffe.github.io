@@ -93,6 +93,6 @@ Have you ever looked at a system and wondered "Why on earth did they do this?" I
 ## Conclusion
 Hopefully you find this to be a helpful process you can follow to organize and respond to problems you encounter!
 
-This process can scale up or down depending on the size of the problem. I've solved little problems this way using Slack threads, and have used more formal processes, like the RFC process for big, difficult to reverse decisions. Definitely don't feel like you need to pen yourself into a single format. But if you're feeling like it, then I've put together a short template which you can use to make this process easier.
+This process can scale up or down depending on the size of the problem. I've solved little problems this way using Slack threads, and have used more formal processes, like the [RFC process](https://blog.pragmaticengineer.com/scaling-engineering-teams-via-writing-things-down-rfcs/) for big, difficult to reverse decisions. Definitely don't feel like you need to pen yourself into a single format. But if you're feeling like it, then [I've put together a short template which you can use to make this process easier](https://docs.google.com/document/d/1BjBdeiZjPs5oHNkQzXBj8RNC5p2N20Kq54x9W3U4H2Q/edit?usp=sharing).
 
 If you use this and find it useful or if you have a novel problem solving process which blows this one out of the water, please let me know!
