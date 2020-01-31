@@ -4,7 +4,6 @@ title: On solving engineering problems as a member of a team
 date_updated: 2020-01-31
 ---
 
-# On solving engineering problems as a member of a team
 Resolving engineering problems can be incredibly difficult, one thing that can help is having a structured approach to how you solve those problems. This post is going to present a path to solving problems as a member of a software engineering organization.
 
 To be clear, the type of problem solving I'm referring to is the "Oh no, I have absolutely no idea" feeling when you first open a feedback ticket against a code base with which you only have a passing familiarity. It’s the type of problem where there isn’t a straightforward solution and so requires some investigation and buy in from your team. Going from that feeling to a solution which you and your organization are happy with is a journey. I typically structure that journey as follows:
@@ -85,6 +84,7 @@ Once you’ve agreed on a solution, go ahead and implement it, deploy it, ramp i
 If the problem wasn’t solved, then it’s important to understand why it didn’t work and document it. It’s worth asking a few questions at this point: Has our understanding of the problem changed? Have the set of viable alternatives changed? Has our prioritization of the problem changed?
 
 You have the opportunity to now iterate through the "Propose solutions" and "Share your document" steps and implement a new solution.
+
 If our solution does work, then we can move on to the final step!
 
 ## Document the final state
