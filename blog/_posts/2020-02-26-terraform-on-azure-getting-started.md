@@ -4,7 +4,7 @@ title: Terraform on Azure - The Absolute Basics
 date_updated: 2020-02-26
 ---
 
-Modern cloud providers put an unbelievably powerful set of tools in the hands of engineers, but it can be a real pain to set up and manage your own cloud infrastructure. [Terraform](http://terraform.io) is an open source tool developed by Hashi Corp which allows you to declare your infrastructure in code, manage it with version control, and deploy it to the cloud. In the following short tutorial, we'll go through setting up Terraform and we'll create a single resource on Azure using Terraform.
+Modern cloud providers put an unbelievably powerful set of tools in the hands of engineers, but it can be a real pain to set up and manage your own cloud infrastructure. [Terraform](http://terraform.io) is an open source tool developed by HashiCorp which allows you to declare your infrastructure in code, manage it with version control, and deploy it to the cloud. In the following short tutorial, we'll go through setting up Terraform and we'll create a single resource on Azure using Terraform.
 
 ## Why Terraform?
 Terraform solves a number of problems you and your organization might face:
@@ -22,16 +22,16 @@ Now that we've discussed why you might want to use Terraform, let's dive into pr
 ## Pre-requisites
 There are a few pieces of software you'll need before you can start using Terraform. The below is tailored towards Mac users and assumes that you have [homebrew](https://brew.sh/) installed.
 
-1. [Install the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest).
+1.  [Install the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest).
     ```
     brew update && brew install azure-cli
     ```
-2. Sign up for an Azure Account if you don't already have one. You can start with [a free account by using this promotion](https://azure.microsoft.com/en-us/free/).
-3. Log into the azure command line. Terraform uses this CLI under the hood to make requests on your behalf:
+2.  Sign up for an Azure Account if you don't already have one. You can start with [a free account by using this promotion](https://azure.microsoft.com/en-us/free/).
+3.  Log into the azure command line. Terraform uses this CLI under the hood to make requests on your behalf:
     ```
     az login
     ```
-4. Install Terraform.
+4.  Install Terraform.
     ```
     brew install terraform
     ```
@@ -40,18 +40,19 @@ There are a few pieces of software you'll need before you can start using Terraf
 
 This section is going to cover creating the simplest piece of cloud infrastructure - a resource group. A resource group is an entity which holds references to all of the resources we create, such as VMs, CosmosDB instances, etc. You can read more about Resource Groups in [Terraform's excellent documentation](https://www.terraform.io/docs/providers/azurerm/r/resource_group.html).
 
-1. Create a terraform file in your working directory: `main.tf`. For this tutorial, we'll be making all of our changes within this file.
-2. We're going to use Azure for this tutorial, so we start by configuring the Azure provider, which is the client library we'll use to interact with the Azure cloud platform.
+1.  Create a terraform file in your working directory: `main.tf`. For this tutorial, we'll be making all of our changes within this file.
+2.  We're going to use Azure for this tutorial, so we start by configuring the Azure provider, which is the client library we'll use to interact with the Azure cloud platform.
 
-Terraform files are written in the HashiCorp Configuration Language (HCL). Blocks, such as this [provider block](https://www.terraform.io/docs/configuration/providers.html), are the main unit of HCL. This particular block declares the provider and the version of the provider, which will be used throughout your terraform project.
-```
-file: main.tf
+    Terraform files are written in the HashiCorp Configuration Language (HCL). Blocks, such as this [provider block](https://www.terraform.io/docs/configuration/providers.html), are the main unit of HCL. This particular block declares the provider and the version of the provider, which will be used throughout your terraform project.
 
-provider "azurerm" {
-  version = "=1.36.0"
-}
-```
-3. Let's check to make sure this worked by running our first terraform command, [init](https://www.terraform.io/docs/commands/init.html). This command performs several initialization steps to prepare your directory for use. You should see something like the following:
+    ```
+    file: main.tf
+
+    provider "azurerm" {
+      version = "=1.36.0"
+    }
+    ```
+3.  Let's check to make sure this worked by running our first terraform command, [init](https://www.terraform.io/docs/commands/init.html). This command performs several initialization steps to prepare your directory for use. You should see something like the following:
 
 ```
 $ terraform init
@@ -72,15 +73,9 @@ If you ever set or change modules or backend configuration for Terraform,
 rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 ```
-4. Next lets create some resources! We'll use a [resource block](https://www.terraform.io/docs/configuration/resources.html) here to define the resource group in our topology.
+4.  Next lets create some resources! We'll use a [resource block](https://www.terraform.io/docs/configuration/resources.html) here to define the resource group in our topology.
 
-The syntax of a resource block is
-
-```
-resource "provider_resource-type" "local_name" {
-    configuration1 = value1
-}
-```
+The syntax of a resource block is `resource "provider_resource-type" "local_name"`.
 
 In the below example, we are defining an azure resource group with the name `"main"`, then we are configuring the resource-group to have the name `"mwolffe-resources"` in Azure, this is the name which will show up in our defined region, `"US West 2"`. These are the required parameters for the resource_group resource, but other resource type have different configuration parameters. You can find a list of all resource types for Azure on the [Terraform website](https://www.terraform.io/docs/providers/azurerm/index.html).
 
@@ -96,7 +91,7 @@ resource "azurerm_resource_group" "main" {
   location = "West US 2"
 }
 ```
-5. Now that we have our first piece of infrastructure defined in code, let's create it on Azure!
+5.  Now that we have our first piece of infrastructure defined in code, let's create it on Azure!
 
 `terraform plan` lists the changes which Terraform will make on your behalf. It does this by querying Azure and comparing the state on Azure to the state we have defined in our file. Let's do that now.
 ```
@@ -171,7 +166,7 @@ Let's go to the Azure portal to make sure that resource group has actually been 
 - Navigate to Resource Groups
 - Observe your resource group and rejoice! You've created your first Azure entity via code.
 
-6. Let's clean up this new resource group by running `terraform destroy`. This will make sure we're not charged for item's we're not using.
+6.  Let's clean up this new resource group by running `terraform destroy`. This will make sure we're not charged for item's we're not using.
 
 ## Conclusion
 Hopefully you found this tutorial a fun and easy introduction to some basic Terraform concepts. I intend to follow this up with another very simple Azure example which creates a basic web server. If you are interested in learning more about Terraform I highly recommend [Jim Brikman's Terraform Up and Running](https://www.terraformupandrunning.com/). Please [tweet at me](https://twitter.com/MaxWolffe) or [send me a LinkedIn message](https://www.linkedin.com/in/maxwolffe/) if you have questions or comments! Thanks for reading.
