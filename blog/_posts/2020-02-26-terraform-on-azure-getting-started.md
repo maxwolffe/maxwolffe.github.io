@@ -54,117 +54,117 @@ This section is going to cover creating the simplest piece of cloud infrastructu
     ```
 3.  Let's check to make sure this worked by running our first terraform command, [init](https://www.terraform.io/docs/commands/init.html). This command performs several initialization steps to prepare your directory for use. You should see something like the following:
 
-```
-$ terraform init
+    ```
+    $ terraform init
 
-Initializing the backend...
+    Initializing the backend...
 
-Initializing provider plugins...
-- Checking for available provider plugins...
-- Downloading plugin for provider "azurerm" (hashicorp/azurerm) 1.36.0...
+    Initializing provider plugins...
+    - Checking for available provider plugins...
+    - Downloading plugin for provider "azurerm" (hashicorp/azurerm) 1.36.0...
 
-Terraform has been successfully initialized!
+    Terraform has been successfully initialized!
 
-You may now begin working with Terraform. Try running "terraform plan" to see
-any changes that are required for your infrastructure. All Terraform commands
-should now work.
+    You may now begin working with Terraform. Try running "terraform plan" to see
+    any changes that are required for your infrastructure. All Terraform commands
+    should now work.
 
-If you ever set or change modules or backend configuration for Terraform,
-rerun this command to reinitialize your working directory. If you forget, other
-commands will detect it and remind you to do so if necessary.
-```
+    If you ever set or change modules or backend configuration for Terraform,
+    rerun this command to reinitialize your working directory. If you forget, other
+    commands will detect it and remind you to do so if necessary.
+    ```
 4.  Next lets create some resources! We'll use a [resource block](https://www.terraform.io/docs/configuration/resources.html) here to define the resource group in our topology.
 
-The syntax of a resource block is `resource "provider_resource-type" "local_name"`.
+    The syntax of a resource block is `resource "provider_resource-type" "local_name"`.
 
-In the below example, we are defining an azure resource group with the name `"main"`, then we are configuring the resource-group to have the name `"mwolffe-resources"` in Azure, this is the name which will show up in our defined region, `"US West 2"`. These are the required parameters for the resource_group resource, but other resource type have different configuration parameters. You can find a list of all resource types for Azure on the [Terraform website](https://www.terraform.io/docs/providers/azurerm/index.html).
+    In the below example, we are defining an azure resource group with the name `"main"`, then we are configuring the resource-group to have the name `"mwolffe-resources"` in Azure, this is the name which will show up in our defined region, `"US West 2"`. These are the required parameters for the resource_group resource, but other resource type have different configuration parameters. You can find a list of all resource types for Azure on the [Terraform website](https://www.terraform.io/docs/providers/azurerm/index.html).
 
-```
-file: main.tf
+    ```
+    file: main.tf
 
-provider "azurerm" {
-  version = "=1.36.0"
-}
+    provider "azurerm" {
+      version = "=1.36.0"
+    }
 
-resource "azurerm_resource_group" "main" {
-  name     = "mwolffe-resources"
-  location = "West US 2"
-}
-```
+    resource "azurerm_resource_group" "main" {
+      name     = "mwolffe-resources"
+      location = "West US 2"
+    }
+    ```
 5.  Now that we have our first piece of infrastructure defined in code, let's create it on Azure!
 
-`terraform plan` lists the changes which Terraform will make on your behalf. It does this by querying Azure and comparing the state on Azure to the state we have defined in our file. Let's do that now.
-```
-$ terraform plan
-Refreshing Terraform state in-memory prior to plan...
-The refreshed state will be used to calculate this plan, but will not be
-persisted to local or remote state storage.
+    `terraform plan` lists the changes which Terraform will make on your behalf. It does this by querying Azure and comparing the state on Azure to the state we have defined in our file. Let's do that now.
+    ```
+    $ terraform plan
+    Refreshing Terraform state in-memory prior to plan...
+    The refreshed state will be used to calculate this plan, but will not be
+    persisted to local or remote state storage.
 
 
-------------------------------------------------------------------------
+    ------------------------------------------------------------------------
 
-An execution plan has been generated and is shown below.
-Resource actions are indicated with the following symbols:
-  + create
+    An execution plan has been generated and is shown below.
+    Resource actions are indicated with the following symbols:
+      + create
 
-Terraform will perform the following actions:
+    Terraform will perform the following actions:
 
-  # azurerm_resource_group.main will be created
-  + resource "azurerm_resource_group" "main" {
-      + id       = (known after apply)
-      + location = "westus2"
-      + name     = "mwolffe-resources"
-      + tags     = (known after apply)
-    }
+      # azurerm_resource_group.main will be created
+      + resource "azurerm_resource_group" "main" {
+          + id       = (known after apply)
+          + location = "westus2"
+          + name     = "mwolffe-resources"
+          + tags     = (known after apply)
+        }
 
-Plan: 1 to add, 0 to change, 0 to destroy.
+    Plan: 1 to add, 0 to change, 0 to destroy.
 
-------------------------------------------------------------------------
+    ------------------------------------------------------------------------
 
-Note: You didn't specify an "-out" parameter to save this plan, so Terraform
-can't guarantee that exactly these actions will be performed if
-"terraform apply" is subsequently run.
-```
+    Note: You didn't specify an "-out" parameter to save this plan, so Terraform
+    can't guarantee that exactly these actions will be performed if
+    "terraform apply" is subsequently run.
+    ```
 
-`terraform plan` doesn't actually create anything for us, it just shows us the changes we're going to make. Let's actually create those resources now, with `terraform apply`.
+    `terraform plan` doesn't actually create anything for us, it just shows us the changes we're going to make. Let's actually create those resources now, with `terraform apply`.
 
-```
-$ terraform apply
+    ```
+    $ terraform apply
 
-An execution plan has been generated and is shown below.
-Resource actions are indicated with the following symbols:
-  + create
+    An execution plan has been generated and is shown below.
+    Resource actions are indicated with the following symbols:
+      + create
 
-Terraform will perform the following actions:
+    Terraform will perform the following actions:
 
-  # azurerm_resource_group.main will be created
-  + resource "azurerm_resource_group" "main" {
-      + id       = (known after apply)
-      + location = "westus2"
-      + name     = "mwolffe-resources"
-      + tags     = (known after apply)
-    }
+      # azurerm_resource_group.main will be created
+      + resource "azurerm_resource_group" "main" {
+          + id       = (known after apply)
+          + location = "westus2"
+          + name     = "mwolffe-resources"
+          + tags     = (known after apply)
+        }
 
-Plan: 1 to add, 0 to change, 0 to destroy.
+    Plan: 1 to add, 0 to change, 0 to destroy.
 
-Do you want to perform these actions?
-  Terraform will perform the actions described above.
-  Only 'yes' will be accepted to approve.
+    Do you want to perform these actions?
+      Terraform will perform the actions described above.
+      Only 'yes' will be accepted to approve.
 
-  Enter a value: yes
+      Enter a value: yes
 
-azurerm_resource_group.main: Creating...
-azurerm_resource_group.main: Creation complete after 1s [id=/subscriptions/xxx-xxx-xxx-xxx/resourceGroups/mwolffe-resources]
+    azurerm_resource_group.main: Creating...
+    azurerm_resource_group.main: Creation complete after 1s [id=/subscriptions/xxx-xxx-xxx-xxx/resourceGroups/mwolffe-resources]
 
-Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
-```
+    Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+    ```
 
-Let's go to the Azure portal to make sure that resource group has actually been created for us!
+    Let's go to the Azure portal to make sure that resource group has actually been created for us!
 
-- Visit ms.portal.azure.com
-- Sign in
-- Navigate to Resource Groups
-- Observe your resource group and rejoice! You've created your first Azure entity via code.
+    - Visit ms.portal.azure.com
+    - Sign in
+    - Navigate to Resource Groups
+    - Observe your resource group and rejoice! You've created your first Azure entity via code.
 
 6.  Let's clean up this new resource group by running `terraform destroy`. This will make sure we're not charged for item's we're not using.
 
