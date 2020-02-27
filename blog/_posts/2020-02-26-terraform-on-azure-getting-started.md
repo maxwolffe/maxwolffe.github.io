@@ -161,9 +161,6 @@ Let's go to the Azure portal to make sure that resource group has actually been 
 - Navigate to Resource Groups
 - Observe your resource group and rejoice!
 
-You should see something like this:
-[Image here]
-
 6. Let's clean up this new resource group by running `terraform destroy`. This will make sure we're not charged for item's we're not using.
 
 ## Conclusion
