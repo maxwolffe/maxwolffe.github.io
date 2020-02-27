@@ -52,6 +52,7 @@ provider "azurerm" {
 }
 ```
 3. Let's check to make sure this worked by running our first terraform command, `init`. This command downloads the integrations necessary to start provisioning for your project. You should see something like the following:
+
 ```
 $ terraform init
 
